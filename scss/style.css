@@ -120,8 +120,8 @@ tbody {
   display: flex;
   flex-wrap: wrap; }
 
-table {
-  padding: 5px; }
+table { 
+  padding: 6px; }
 
 .checkbox {
   align-self: flex-start; }
