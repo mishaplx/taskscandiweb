@@ -1,0 +1,48 @@
+@import url(../css/nullstyle.css);
+body {
+  background-color: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.item {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+}
+
+.block_title {
+  border-bottom: 2px solid black;
+  padding: 10px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block_title .title {
+  font-size: 30px;
+}
+
+.block_title .button .add,
+.block_title .button .mass__delete {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.mass__delete {
+  border: 1px solid #000;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+}
+/*# sourceMappingURL=style-index.css.map */
