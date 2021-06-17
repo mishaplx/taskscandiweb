@@ -1,8 +1,8 @@
 <?php
 
 $page_title = 'list product';
-require_once './classes.php';
-require_once './config/database.php';
+include './classes.php';
+include './config/database.php';
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ require_once './config/database.php';
     <div class="block_title">
         <h1 class="title">Product list</h1>
         <div class="button">
-            <button class="add" onclick="document.location='./add_product.php'">add</button>
+            <button class="add" onclick="document.location='./add_product.php'">ADD</button>
         </div>
     </div>
 
@@ -81,7 +81,7 @@ require_once './config/database.php';
             }
 
             ?>
-            <button type="submit" class="mass__delete" name="buttonDelete" value="Delete"> Mass Delete </button>
+            <button type="submit" class="mass__delete" name="buttonDelete" value="Delete"> MASS DELETE </button>
         </form>
 
     </div>

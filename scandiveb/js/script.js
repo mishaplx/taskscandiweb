@@ -3,7 +3,7 @@ const furniture = document.querySelector('.form__furniture')
 const book = document.querySelector('.form__book')
 
 const box1 = document.querySelector('.box1')
-
+const d = document.getElementsByClassName('input__disc')
 
 
 
@@ -14,7 +14,7 @@ function changeFunc() {
         furniture.style.display = 'none'
         book.style.display = 'none'
     }
-    else if (box1.value == 'Furniture'){
+    else if (box1.value == 'furniture'){
 
         disk.style.display = 'none'
         furniture.style.display = 'inline-block'
@@ -35,3 +35,4 @@ function changeFunc() {
 function cancle(){
     document.getElementById("cancle").reset();
 }
+
