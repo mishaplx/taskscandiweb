@@ -20,14 +20,20 @@ abstract class Product
         $query->execute();
         return  $query->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function delete($name_db ,$delete){//42
+    public function delete($name_db, $delete)
+    {
         $query = $this->pdo->prepare("DELETE FROM {$name_db} WHERE id = :del");
-        $query->bindValue('del',$delete);
+        $query->bindValue('del', $delete);
         $query->execute();
         header('Location: index.php');
-
     }
-    
+    public function showproduct($name_db)
+    {
+        $query = $this->pdo->prepare("SELECT * FROM {$name_db} ");
+        $query->execute();
+        return  $query->fetchAll(PDO::FETCH_ASSOC);
+       
+    }
 }
 
 
@@ -38,7 +44,7 @@ class Book extends Product
     {
         return $this->weight;
     }
-  
+
     public function set_weight($sku, $name, $price, $weight_form)
     {
         if (empty($weight_form == false)) {
@@ -50,7 +56,6 @@ class Book extends Product
             return $sql = "INSERT INTO book (sku, name_product, price, weight_book) VALUES ('$this->sku','$this->name','$this->price','$weight_form')";
         }
     }
-   
 }
 
 
@@ -99,7 +104,6 @@ class Furniture extends Product
         $this->L = $L;
         return $sql = "INSERT INTO furniture (sku, name_product, price, height, width, length_furtinure) VALUES ('$this->sku','$this->name','$this->price','$H','$W','$L')";
     }
-   
 }
 
 

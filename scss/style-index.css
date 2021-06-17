@@ -1,26 +1,7 @@
-@import url(../css/nullstyle.css);
-body {
-  background-color: white;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-}
-
-.item {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #000;
-}
-
+@import url(./nullstyle.css);
 .block_title {
+  padding: 10px;
   border-bottom: 2px solid black;
-  padding: 10px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,18 +12,44 @@ body {
 
 .block_title .title {
   font-size: 30px;
+  font-weight: 600;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.block_title .button .add,
-.block_title .button .mass__delete {
-  padding: 10px 20px;
+.container {
+  padding: 10px;
+}
+
+.container .item {
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #000;
+}
+
+.container .item li {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container .item li:first-child {
+  text-align: left;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
   font-size: 20px;
+  -webkit-box-shadow: 3px 3px 2px black;
+          box-shadow: 3px 3px 2px black;
 }
 
 .mass__delete {
-  border: 1px solid #000;
   position: absolute;
-  top: 5%;
-  left: 85%;
+  top: 2%;
+  left: 50%;
 }
 /*# sourceMappingURL=style-index.css.map */
